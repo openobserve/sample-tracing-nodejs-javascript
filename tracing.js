@@ -16,9 +16,9 @@ const sdk = new opentelemetry.NodeSDK({
   // traceExporter: new opentelemetry.tracing.ConsoleSpanExporter(),
   traceExporter: new opentelemetry.tracing.ConsoleSpanExporter(),
   traceExporter: new OTLPTraceExporter({
-    url: "https://alpha1.gke.zinclabs.dev/api/default/traces",
+    url: "url",
     headers: {
-      Authorization: "Basic cm9vdEBleGFtcGxlLmNvbTpDb21wbGV4cGFzcyMxMjM=",
+      Authorization: "Authorization",
     },
   }),
   instrumentations: [getNodeAutoInstrumentations()],
