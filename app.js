@@ -5,7 +5,9 @@ const PORT = parseInt(process.env.PORT || "8080");
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  setTimeout(() => {
+    res.send("Hello World");
+  }, 1000);
 });
 
 app.listen(PORT, () => {
