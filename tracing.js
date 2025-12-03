@@ -10,9 +10,10 @@ const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-http')
 diag.setLogger(new DiagConsoleLogger(), DiagLogLevel.INFO);
 
 const exporterOptions = {
-  url: "http://localhost:5080/api/test/v1/traces",  // Replace with your OpenObserve endpoint
+  url: "http://localhost:5080/api/default/v1/traces",  // Replace with your OpenObserve endpoint
   headers: {
-    Authorization: "Basic YOUR_AUTH_TOKEN" ,  // Replace with your auth token
+    Authorization: "Basic YOUR_AUTH_TOKEN",  // Replace with your auth token
+    "stream-name": "default"  // Optional: Specify the trace stream name
   },
   timeoutMillis: 15000,  // Increase timeout to 15 seconds
 }
